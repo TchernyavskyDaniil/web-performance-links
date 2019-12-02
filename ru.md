@@ -56,6 +56,8 @@
 - [Примеры загрузки изображений](https://csswizardry.com/2018/06/image-inconsistencies-how-and-when-browsers-download-images/)
 - [WebP compression](https://developers.google.com/speed/webp/docs/compression)
 - [Конвертируем WebP в иной формат и наоборот с помощью dwebp/cwebp](https://developers.google.com/speed/webp/docs/using)
+- [Font-display](https://developer.mozilla.org/ru/docs/Web/CSS/@font-face/font-display)
+- [Управляем поведением font-face в CSS](https://ymatuhin.ru/front-end/font-display/)
 
 ## Fonts
 - Переведенная [статья](https://css-live.ru/articles/ischerpyvayushhee-rukovodstvo-po-strategiyam-zagruzki-veb-shriftov.html) с подходами загрузке шрифтов
