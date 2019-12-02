@@ -12,6 +12,7 @@
 - [H2](#H2)
 - [SSR](#SSR)
 - [Other](#Other)
+- [Telegam - каналы](#Telegram)
 
 ## Why
 - [GSMA](https://www.gsmaintelligence.com/research/?file=091e55693950afd0342412bfb5120a0d&download)
@@ -114,4 +115,8 @@
 - [React, Code Splitting, React Loadable](https://habr.com/ru/post/325688/). Учтите, что React Loadable уже не поддерживается, на данный момент предпочитаю [react-imported-component](https://github.com/theKashey/react-imported-component)
 - [Не тонем под размером скриптов Youtube видосиков, ну только в начале :)](https://github.com/TchernyavskyDaniil/web-developer-best-practices/tree/master/youtube)
 - [Анализируем наши любимые библиотеки](https://bundlephobia.com/) по размеру, скорости загрузки и зависимостей
+
+## Telegram
+- [Иван Акулов про разработку](https://t.me/iamakulov_channel)
+- [Defront - про фронтенд - разработку и не только](https://t.me/defront)
 
