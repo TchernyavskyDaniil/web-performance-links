@@ -47,10 +47,12 @@
 - Библиотеки, которые помогают жить с critical CSS: [critters](https://github.com/GoogleChromeLabs/critters), [critical](https://github.com/addyosmani/critical), [penthouse](https://github.com/pocketjoso/penthouse)
 
 ## Images
+- Image bytes [http archive](https://httparchive.org/reports/state-of-images?start=2016_01_01&end=latest&view=list)
 - [Зачем нам <picture>](https://webdesign.tutsplus.com/ru/tutorials/quick-tip-how-to-use-html5-picture-for-responsive-images--cms-21015) и [полифил для IE](https://scottjehl.github.io/picturefill/)
 - [Why WebP](https://bitsofco.de/why-and-how-to-use-webp-images-today/), [перевод](https://medium.com/web-standards/webp-%D1%81%D0%B5%D0%B3%D0%BE%D0%B4%D0%BD%D1%8F-%D0%B4%D0%BB%D1%8F-%D1%87%D0%B5%D0%B3%D0%BE-%D0%B8-%D0%BA%D0%B0%D0%BA-4f64d4330f8d)
 - [Примеры загрузки изображений](https://csswizardry.com/2018/06/image-inconsistencies-how-and-when-browsers-download-images/)
 - [WebP compression](https://developers.google.com/speed/webp/docs/compression)
+- [Конвертируем WebP в иной формат и наоборот с помощью dwebp/cwebp](https://developers.google.com/speed/webp/docs/using)
 
 ## Fonts
 - Переведенная [статья](https://css-live.ru/articles/ischerpyvayushhee-rukovodstvo-po-strategiyam-zagruzki-veb-shriftov.html) с подходами загрузке шрифтов
@@ -68,6 +70,7 @@
 - [Гайд](https://css-tricks.com/the-complete-guide-to-lazy-loading-images/) по lazy loading изображений, [Ру. вариант](https://wpgutenberg.top/lazy-load-dlja-izobrazhenij-na-sajte-polnoe-rukovodstvo/) (перевод скорее всего)
 - [Intersection Observer API](https://developer.mozilla.org/ru/docs/Web/API/Intersection_Observer_API) для современных браузеров. [Песочница](https://codepen.io/imagekit_io/pen/BPXQZZ)
 - [Lazy loading + SEO](https://yoast.com/video/ask-yoast-lazy-load/)
+- [Lazysizes](https://github.com/aFarkas/lazysizes), SEO Friendly 
 
 ## Babel and Webpack
 - [Core js 3](https://github.com/zloirock/core-js/blob/master/docs/2019-03-19-core-js-3-babel-and-a-look-into-the-future.md#what-changed-in-core-js3) Предоставляет возможность попробовать отказаться babel polyfill и добавляет поддержку proposals. Плюс флаг usage, чтобы полифилить только то, что используется
