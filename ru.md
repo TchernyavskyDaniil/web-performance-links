@@ -40,6 +40,7 @@
 - [Preload key requests](https://web.dev/uses-rel-preload/), web.dev
 - [Preload, Prefetch и другие подходы к загрузке скриптов](https://medium.com/reloading/preload-prefetch-and-priorities-in-chrome-776165961bbf), Medium
 - [Preconnect to required origins](https://web.dev/uses-rel-preconnect/), web.dev
+- [Dns-prefetch/preconnect, when to use](https://www.ctrl.blog/entry/dns-prefetch-preconnect.html)
 
 
 ## CSS
@@ -65,7 +66,8 @@
 - [The Mitt Romney Web Font Problem](https://www.zachleat.com/web/mitt-romney-webfont-problem/)
 - [Preload with font-display](https://www.zachleat.com/web/preload-font-display-optional/) Варианты использования и примеры анти-патернов
 - [Стратегии загрузки шрифтов](https://www.zachleat.com/web/css-tricks-web-fonts/) для CSS-tricks
-- [Fonttools](https://github.com/fonttools/fonttools), который позволяет разбить шрифт по unicode-range, в частности для использования critical FOFT 
+- [Fonttools](https://github.com/fonttools/fonttools), который позволяет разбить шрифт по unicode-range, в частности для использования critical FOFT
+- [Fontfaceobserver](https://github.com/bramstein/fontfaceobserver), библиотека, которая позволяет более гибче управлять загрузкой шрифтов 
 
 ## Lazy Loading
 - [Изображения и другие нужды. Плюсы и минусы.](https://imagekit.io/blog/lazy-loading-images-complete-guide/)
@@ -103,6 +105,7 @@
 - [Пример](http://www.http2demo.io/) мультиплексинга
 - [H2, варианты отказа от инлайн стилей и ипользование server push](https://www.tunetheweb.com/blog/inlining-css-is-not-for-me/)
 - [Использование Server-push c Preload](https://www.tunetheweb.com/performance/http2/http2-push/)
+- [H2 Server Push](https://www.smashingmagazine.com/2017/04/guide-http2-server-push/)
 
 ## SSR
 - [Сравнение плюсов и минусов SSR](https://medium.com/walmartlabs/the-benefits-of-server-side-rendering-over-client-side-rendering-5d07ff2cefe8)
@@ -116,6 +119,7 @@
 - [React, Code Splitting, React Loadable](https://habr.com/ru/post/325688/). Учтите, что React Loadable уже не поддерживается, на данный момент предпочитаю [react-imported-component](https://github.com/theKashey/react-imported-component)
 - [Не тонем под размером скриптов Youtube видосиков, ну только в начале :)](https://github.com/TchernyavskyDaniil/web-developer-best-practices/tree/master/youtube)
 - [Анализируем наши любимые библиотеки](https://bundlephobia.com/) по размеру, скорости загрузки и зависимостей
+- [Memory, latency](https://habr.com/ru/post/43905/)
 
 ## Telegram
 - [Иван Акулов про разработку](https://t.me/iamakulov_channel)
