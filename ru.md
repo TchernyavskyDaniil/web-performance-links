@@ -13,7 +13,7 @@
 - [H2](#H2)
 - [SSR](#SSR)
 - [Other](#Other)
-- [Telegam - каналы](#Telegram)
+- [Telegam - canals](#Telegram)
 
 ## Why
 - [GSMA](https://www.gsmaintelligence.com/research/?file=091e55693950afd0342412bfb5120a0d&download)
@@ -121,3 +121,6 @@
 - [Иван Акулов про разработку](https://t.me/iamakulov_channel)
 - [Defront - про фронтенд - разработку и не только](https://t.me/defront)
 
+
+
+###### Telegram - @Tchernyavsky 
