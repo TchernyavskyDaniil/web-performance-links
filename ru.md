@@ -96,7 +96,7 @@
 - [Больше плагинов](https://github.com/iamakulov/awesome-webpack-perf) от [iamakulov](https://github.com/iamakulov)
 - [BundleAnalyzerPlugin](https://github.com/webpack-contrib/webpack-bundle-analyzer) смотрим и в ужасе обнаруживаем размер своего бандла
 - [Тыкаем палкой](https://habr.com/ru/post/350886/) необходимые плагины вебпака
-- [Webpack 4 на Udemy](https://www.udemy.com/webpack-from-beginner-to-advanced/))
+- [Webpack 4 на Udemy](https://www.udemy.com/webpack-from-beginner-to-advanced/)
 - [Статья](https://medium.com/webpack/link-rel-prefetch-preload-in-webpack-51a52358f84c) с описанием примера прелоада/префетча для [модулей](https://webpack.js.org/guides/code-splitting/#prefetching-preloading-modules) в вебпаке 4
 - [Tree Shaking](https://webpack.js.org/guides/tree-shaking/)
 - [Вебпак, вид сквозь монокль](https://www.youtube.com/watch?v=6Q3DmKH-ehY)
