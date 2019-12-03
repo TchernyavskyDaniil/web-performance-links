@@ -1,5 +1,7 @@
 ## Copy and fix for Moscow CSS
 
+- [Presentation pptx + pdf](https://yadi.sk/d/MgnmpNh7tQkyoQ)
+
 # Web performance, RU
 # Basic
 
@@ -130,5 +132,7 @@
 - [Defront - про фронтенд - разработку и не только](https://t.me/defront)
 
 
+## [Krasnodar Dev Days](https://t.me/krddevdays)
+## [Krasnodar Frontend](https://t.me/krdfrontend)
 
 ###### Telegram - @Tchernyavsky 
