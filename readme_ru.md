@@ -131,8 +131,4 @@
 - [Иван Акулов про разработку](https://t.me/iamakulov_channel)
 - [Defront - про фронтенд - разработку и не только](https://t.me/defront)
 
-
-## [Krasnodar Dev Days](https://t.me/krddevdays)
-## [Krasnodar Frontend](https://t.me/krdfrontend)
-
 ###### Telegram - @Tchernyavsky 
