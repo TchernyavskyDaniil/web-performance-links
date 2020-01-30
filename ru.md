@@ -100,6 +100,8 @@ $ npx browserslist
 - [Лодочка перфоманса ctitical CSS](https://webmasters.stackexchange.com/questions/118315/how-much-critical-css-can-be-inlined-before-there-is-a-negative-performance-impa) в 14кб для инлайн стилей с учетом H1
 - [Web Fundamentals, Defer unused CSS](https://developers.google.com/web/tools/lighthouse/audits/unused-css), с примером как можем определить critical, non-critical стили на текущий экран
 - Библиотеки, которые помогают жить с critical CSS: [critters](https://github.com/GoogleChromeLabs/critters), [critical](https://github.com/addyosmani/critical), [penthouse](https://github.com/pocketjoso/penthouse)
+- [PurgeCSS](https://github.com/FullHuman/purgecss/) это выходец из ранних реализаций около – тришейкинга как в нашем любимом js. То есть его цель проста – убрать неиспользуемые стили анализируя указанную вами директорию, а именно тот же к примеру хтмл и цсс. Да и вообще все основные реализации. Но с ним надо аккуратней.
+
 
 ## Images
 - Image bytes [http archive](https://httparchive.org/reports/state-of-images?start=2016_01_01&end=latest&view=list)
