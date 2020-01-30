@@ -2,6 +2,8 @@
 # Basic
 
 - [Why](#Why)
+- [BundleAnalyze](#BundleAnalyze)
+- [Browserslist](#Browserslist)
 - [Tools](#Tools)
 - [Performance API](#Performance-API)
 - [Resource Hints](#Resource-Hints)
@@ -15,12 +17,60 @@
 - [Other](#Other)
 - [Telegam - canals](#Telegram)
 
+## Vol.1 
+[Moscow CSS В погоне за перморфмансом](https://youtu.be/wbTEDA8A4xY)
+
 ## Why
 - [GSMA](https://www.gsmaintelligence.com/research/?file=091e55693950afd0342412bfb5120a0d&download)
 - [Total bytes by http archive](https://httparchive.org/reports/state-of-the-web#bytesTotal), анализ 2014-2019 промежутка
-- [WPO](https://wpostats.com/)
+- [WPO](https://wpostats.com/) - Список сайтов, которые выложили
 - [Ericsson Mobility Report](https://www.ericsson.com/en/press-releases/2016/2/streaming-delays-mentally-taxing-for-smartphone-users-ericsson-mobility-report)
 - [iamakulov с примерами, когда это помогло](https://twitter.com/jsunderhood/status/1138029053846458368)
+
+## BundleAnalyze
+- [WebpackBundleAnalyzer](https://github.com/webpack-contrib/webpack-bundle-analyzer)
+```
+// Example:
+// dev
+const { BundleAnalyzerPlugin } = require('webpack-bundle-analyzer');
+
+plugins: [
+    new BundleAnalyzerPlugin({
+      analyzerMode: 'server',
+      analyzerHost: 'localhost',
+      openAnalyzer: false,
+    }),
+]
+
+// prod
+const { BundleAnalyzerPlugin } = require('webpack-bundle-analyzer');
+
+plugins: [
+    new BundleAnalyzerPlugin(
+      analyzerMode: 'static',
+      reportFilename: 'bundleAnalyzer.html',
+      openAnalyzer: false,
+    }),
+]
+```
+- [Bundlephobia](https://bundlephobia.com/) - Поможет проанализировать базово пакет
+- [DuplicatePackageCheckerPlugin](https://github.com/darrenscerri/duplicate-package-checker-webpack-plugin/blob/master/package.json) - Позволяет проверить дублирующие зависимости версий библиотек
+
+## Browserslist
+- [Browserslist](https://github.com/browserslist/browserslist) - Определяем, какие браузеры будем поддерживать
+Далее вам необходимо создать `.browserslistrc`  
+Пример содержимого:
+```
+> 1%
+not dead
+not ie <= 11
+not op_mini all
+```
+Проверка, какие браузеры мы именно поддерживаем, особенно важно, если вы написали `last 2 versions`
+```
+$ npx browserslist
+```
+
 
 ## Tools
 - [Lighthouse](https://github.com/GoogleChrome/lighthouse)
@@ -80,13 +130,41 @@
 
 ## Babel and Webpack
 - [Core js 3](https://github.com/zloirock/core-js/blob/master/docs/2019-03-19-core-js-3-babel-and-a-look-into-the-future.md#what-changed-in-core-js3) Предоставляет возможность попробовать отказаться babel polyfill и добавляет поддержку proposals. Плюс флаг usage, чтобы полифилить только то, что используется
-- Устанавливайте [loose](https://babeljs.io/docs/en/babel-preset-env#loose) в true если вы уверены в вашем коде, и если применяемые плагины содержат это свойство. При установке этого свойства, генерируемый код будет немного отклоняться от спецификации в пользу быстродействия
-- Не забывайте про [targets → browers](https://babeljs.io/docs/en/babel-preset-env#browserslist-integration, браузер лист позволит не полифилить код под браузеры поддержку которых вы не планируете (слишком старые полифилы), а usage флаг уберет полифилы того что вы не используете у себя в коде (ненужные полифилы)
+- [useBuiltIns](https://babeljs.io/docs/en/babel-preset-env#usebuiltins), если кратко:  
+  ```"useBuiltIns": "usage"``` и не париться на счет полифилов, babel все сделает за Вас.
+  Если зависимость отправляет код ES5, но использует функции ES6 + без явного указания какие полифилы нужны: используйте ```"useBuiltIns": "entry"```, а затем добавьте import ```@babel/polyfill``` в входной файл или только к необходимым компонентам.
+  Это будет импортировать ВСЕ полифилы на основе ваших целевых показателей какие браузеры поддерживать.
+  
+  Пример для Server-Side Rendering:
+  ```javascript
+    // your entry SSR
+    // with core js 2
+    require('babel-core/register');
+    require('babel-polyfill');
+    ...
+  
+   // with core js 3
+   require('@babel/register')({
+    // optional
+    presets: ['@babel/preset-env']
+   });
+   require('core-js/stable');
+  ```
+
+- [Modules](https://babeljs.io/docs/en/babel-preset-env#modules) нам нужен, чтобы мы указывали, какую спецификацию поддерживали. В общем преобразование синтаксиса ES6 в другой тип модуля. Какое нам стоит выбирать в большинстве случаев? Я бы предположил false. Потому что Tree Shaking.
+- Немного о Tree Shaking: Tree shaking (Встряхивание дерева) – это метод оптимизации путем удаления любого кода из окончательного файла, который фактически не используется.
+Когда приложение на Javascript достигает определенного размера, его обычно разделяют на модули. Однако, через какое то время, становиться сложно отслеживать все что импортируется и как это используется. В итоге при сборке пакетов, мы можем получить большое количество импортированного кода, который фактически не используется.
+Tree shaking (Встряхивание дерева) – это метод оптимизации путем удаления любого кода из окончательного файла, который фактически не используется.
+- Текущее положение Tree Shaking согласно [документации](https://webpack.js.org/guides/tree-shaking/)
+- [Небольшая демка](https://github.com/TchernyavskyDaniil/shake-me), где вы можете попробовать в modules установить нужный тип модулей для итоговой сборки 
+- Устанавливайте [loose](https://babeljs.io/docs/en/babel-preset-env#loose) в true если вы уверены в вашем коде, и если применяемые плагины содержат это свойство. При установке этого свойства, генерируемый код будет немного отклоняться от спецификации в пользу быстродействия.
+Без специальной настройки @babel/preset-env пытается сгенерировать как можно более близкий к спецификации код. Но, скорее всего, ваш код не настолько плох и не использует все возможные крайние случаи ES6+ спецификации. Тогда весь лишний оверхед можно убрать, включив loose трансформации для preset-env
+- Не забывайте про [targets browers](https://babeljs.io/docs/en/babel-preset-env#browserslist-integration), браузер лист позволит не полифилить код под браузеры поддержку которых вы не планируете (слишком старые полифилы), а usage флаг уберет полифилы того что вы не используете у себя в коде (ненужные полифилы)
 - [babel-plugin-transform-imports](https://www.npmjs.com/package/babel-plugin-transform-imports)
 - Если вы используете React и PropTypes, то стоит выбрать решение с вырезанием из прод бандла проптайпсов, например, [babel-plugin-transform-react-remove-prop-types](https://www.npmjs.com/package/babel-plugin-transform-react-remove-prop-types)
 - [Больше](https://github.com/GoogleChromeLabs/webpack-libs-optimizations) о способах оптимизации бандла
 - [Проверяем дубликаты зависимостей](https://www.npmjs.com/package/duplicate-package-checker-webpack-plugin), например, если вы вдруг обнаружили 3 лодаша разных версий в зависимостях ваших пакетов
-- Текущее положение Tree Shaking согласно [документации](https://webpack.js.org/guides/tree-shaking/)
+- [Про динамический импорт и Webpack magic comments](https://webpack.js.org/guides/code-splitting/#dynamic-imports)
 - [HashedModuleIdsPlugin](https://webpack.js.org/plugins/hashed-module-ids-plugin/) Вебпак ваши модули превращает в require's, например a-N заменятся на 0-N, добавив новый, перерасчет опять станет. Порядковые номера в общем. Сам плагин позволяет вместо цифровых использовать хеш определенный пути до файла.
 - [HappyPack](https://github.com/amireh/happypack) позволяет оптимизировать скорость сборки благодаря тредам. Особо актуален для версий вебпака 3 и ниже.
 - [CacheLoader](https://github.com/webpack-contrib/cache-loader) Сохраняет в бд или в файловой системе и сравнивает цепочку лоадеров. Сохраняет результат сборки на конкретную цепочку лоадеров.
