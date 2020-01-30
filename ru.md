@@ -1,5 +1,4 @@
-# Web performance, RU
-# Basic
+# Статьи, примеры, дока и еще что - то. В общем основные вещи, которые помогут в оптимизации вашего проекта на фронте (возможно)
 
 - [Why](#Why)
 - [BundleAnalyze](#BundleAnalyze)
@@ -19,6 +18,9 @@
 
 ## Vol.1 
 [Moscow CSS В погоне за перморфмансом](https://youtu.be/wbTEDA8A4xY)
+
+## Vol.2
+[Moscow JS В погоне за перформансом vol.2](https://yadi.sk/i/EgPxB1OVLCOynQ)
 
 ## Why
 - [GSMA](https://www.gsmaintelligence.com/research/?file=091e55693950afd0342412bfb5120a0d&download)
