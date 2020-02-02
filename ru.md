@@ -105,7 +105,7 @@ $ npx browserslist
 
 ## Images
 - Image bytes [http archive](https://httparchive.org/reports/state-of-images?start=2016_01_01&end=latest&view=list)
-- [Зачем нам <picture>](https://webdesign.tutsplus.com/ru/tutorials/quick-tip-how-to-use-html5-picture-for-responsive-images--cms-21015) и [полифил для IE](https://scottjehl.github.io/picturefill/)
+- [Зачем нам picture <picture>](https://webdesign.tutsplus.com/ru/tutorials/quick-tip-how-to-use-html5-picture-for-responsive-images--cms-21015) и [полифил для IE](https://scottjehl.github.io/picturefill/)
 - [Why WebP](https://bitsofco.de/why-and-how-to-use-webp-images-today/), [перевод](https://medium.com/web-standards/webp-%D1%81%D0%B5%D0%B3%D0%BE%D0%B4%D0%BD%D1%8F-%D0%B4%D0%BB%D1%8F-%D1%87%D0%B5%D0%B3%D0%BE-%D0%B8-%D0%BA%D0%B0%D0%BA-4f64d4330f8d)
 - [Примеры загрузки изображений](https://csswizardry.com/2018/06/image-inconsistencies-how-and-when-browsers-download-images/)
 - [WebP compression](https://developers.google.com/speed/webp/docs/compression)
