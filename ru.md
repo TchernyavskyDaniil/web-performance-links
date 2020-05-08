@@ -16,12 +16,6 @@
 - [Other](#Other)
 - [Telegam - canals](#Telegram)
 
-## Vol.1 
-[Moscow CSS В погоне за перморфмансом](https://youtu.be/wbTEDA8A4xY)
-
-## Vol.2
-[Moscow JS В погоне за перформансом vol.2](https://yadi.sk/i/EgPxB1OVLCOynQ)
-
 ## Why
 - [GSMA](https://www.gsmaintelligence.com/research/?file=091e55693950afd0342412bfb5120a0d&download)
 - [Total bytes by http archive](https://httparchive.org/reports/state-of-the-web#bytesTotal), анализ 2014-2019 промежутка
@@ -199,6 +193,8 @@ Tree shaking (Встряхивание дерева) – это метод оп�
 
 ## Other
 - [Как (не)удовлетворить Google PageSpeed](https://youtu.be/_0psqory6rk?t=16820) и на [Krasnodar Frontend: Meetup](https://www.youtube.com/watch?v=cl8VhCmpDPo)
+- [Moscow CSS В погоне за перморфмансом](https://youtu.be/wbTEDA8A4xY)
+- [Moscow JS В погоне за перформансом vol.2](https://yadi.sk/i/EgPxB1OVLCOynQ)
 - [Script priorities](https://addyosmani.com/blog/script-priorities/) с подходами загрузкок
 - [React, Code Splitting, React Loadable](https://habr.com/ru/post/325688/). Учтите, что React Loadable уже не поддерживается, на данный момент предпочитаю [react-imported-component](https://github.com/theKashey/react-imported-component)
 - [Не тонем под размером скриптов Youtube видосиков, ну только в начале :)](https://github.com/TchernyavskyDaniil/web-developer-best-practices/tree/master/youtube)
